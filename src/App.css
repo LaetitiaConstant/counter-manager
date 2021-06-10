@@ -1,38 +1,100 @@
+* {
+	cursor: none;
+	background-color: #92a4a1;
+}
+
 .App {
-  text-align: center;
+	height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+	display: flex;
+	margin: 50px 70px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.curseur {
+	width: 20px;
+	height: 20px;
+	background-color: rgb(233, 237, 236, 0.6);
+	border-radius: 50%;
+	position: absolute;
+	pointer-events: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.counters {
+	border: blue 1px solid;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 250px;
+	width: 400px;
 }
 
-.App-link {
-  color: #61dafb;
+.container-animation {
+	overflow: hidden;
+	display: flex;
+	margin-top: 200px;
+	transform: translateY(-50%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.txt {
+	white-space: nowrap;
+	font-size: 200px;
+	animation: scrollTxt 50s linear infinite;
 }
+
+@keyframes scrollTxt {
+	0% {
+		transform: translate(0%, 0);
+	}
+	100% {
+		transform: translate(-100%, 0);
+	}
+}
+
+.add-counter-button {
+	border: none;
+	width: 150px;
+	height: 150px;
+	background-color: rgb(111, 140, 136);
+	border-radius: 50%;
+	border: white 4px dashed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.add-counter-button:hover {
+	transform: rotate(360deg);
+	transition-property: transform;
+	transition-duration: 5s;
+	transition-timing-function: linear;
+}
+
+.button-counter-text {
+	border: none;
+	width: 100px;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(111, 140, 136);
+	border-radius: 50%;
+	border: white 1px dashed;
+	transition-property: transform;
+	transition-duration: 5s;
+	transition-timing-function: linear;
+}
+
+.button-counter-text:hover {
+	transform: rotate(-360deg);
+}
+
+/* .half-circle {
+	width: 100px;
+	height: 100px;
+	border: 5px solid black;
+	border-radius: 50%;
+	border-bottom-color: royalblue;
+	border-left-color: royalblue;
+} */
