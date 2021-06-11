@@ -12,7 +12,7 @@ function App() {
 		);
 	};
 
-	const [counter, setCounter] = useState([0, 1]);
+	const [counter, setCounter] = useState([0]);
 
 	const AddCounter = () => {
 		const newCounter = [...counter];
@@ -41,8 +41,7 @@ function App() {
 				<h1 class="txt">- COUNTER - MANAGER - COUNTER - MANAGER&nbsp;</h1>
 			</div>
 
-			<div className="container">
-				<div ref={curseurRef} className="curseur"></div>
+			<div className="container container-counters">
 				{counter.map((counters, index) => {
 					return (
 						<Counters
@@ -59,8 +58,10 @@ function App() {
 				<div className="add-counter-button" onClick={AddCounter}>
 					<div className="button-counter-text">Add Counter</div>
 				</div>
+
 				{/* <div class="half-circle"></div> */}
 			</div>
+			<div ref={curseurRef} className="curseur"></div>
 		</div>
 	);
 }
